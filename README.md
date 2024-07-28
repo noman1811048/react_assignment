@@ -12,7 +12,7 @@ This is a frontend application built using React that displays hotel details. It
 - Show a 404 page for unknown slugs (optional).
 
 ## Folder Structure
-
+```
 hotel-frontend/
 ├── public/
 │ ├── index.html
@@ -30,7 +30,7 @@ hotel-frontend/
 ├── .gitignore
 ├── package.json
 ├── README.md
-
+```
 
 ## Getting Started
 
