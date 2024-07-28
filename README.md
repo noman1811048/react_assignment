@@ -1,9 +1,54 @@
-# React + Vite
+# Hotel Frontend Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a frontend application built using React that displays hotel details. It uses a configuration JSON file for static values, such as the API base URL, and reuses components where appropriate. The application includes a shimmer loader while loading data and maintains high code quality. The application is served through the `/hotel` route.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# react_assignment
+- Display hotel details using React components.
+- Reuse components for better code maintainability.
+- Show a shimmer loader while data is loading.
+- Use a configuration JSON file for static values.
+- Serve the page through the `/hotel` route.
+- Show a 404 page for unknown slugs (optional).
+
+## Folder Structure
+
+hotel-frontend/
+├── public/
+│ ├── index.html
+├── src/
+│ ├── components/
+│ │ ├── HotelDetail.js
+│ │ ├── Loader.js
+│ │ ├── NotFound.js
+│ ├── config/
+│ │ ├── config.json
+│ ├── pages/
+│ │ ├── HotelPage.js
+│ ├── App.js
+│ ├── index.js
+├── .gitignore
+├── package.json
+├── README.md
+
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm (v6 or higher) or yarn
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/hotel-frontend.git
+cd hotel-frontend
+```
+## Install dependencies:
+#### npm install
+#### Open your browser and navigate to http://localhost:3000/hotel/hotel-slug.
+### Deployment
+#### npm run build
