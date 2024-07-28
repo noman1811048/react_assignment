@@ -13,23 +13,33 @@ This is a frontend application built using React that displays hotel details. It
 
 ## Folder Structure
 ```
-hotel-frontend/
-├── public/
-│ ├── index.html
-├── src/
-│ ├── components/
-│ │ ├── HotelDetail.js
-│ │ ├── Loader.js
-│ │ ├── NotFound.js
-│ ├── config/
-│ │ ├── config.json
-│ ├── pages/
-│ │ ├── HotelPage.js
-│ ├── App.js
-│ ├── index.js
-├── .gitignore
-├── package.json
-├── README.md
+src/
+├── assets/
+│   ├── images/
+│   │   ├── image1.jpg
+│   │   ├── image2.jpg
+│   │   ├── image3.jpg
+│   │   ├── image4.jpg
+│   │   └── image5.jpg
+├── components/
+│   ├── Gallery/
+│   │   ├── Gallery.jsx
+│   │   └── Gallery.css
+│   ├── NotFoundPage/
+│   │   ├── NotFoundPage.jsx
+│   │   └── NotFoundPage.css
+├── hooks/
+│   └── useFetch.js
+├── pages/
+│   ├── Home/
+│   │   └── Home.jsx
+│   ├── Hotel/
+│   │   └── Hotel.jsx
+├── App.js
+├── index.js
+└── config/
+    └── config.json
+
 ```
 
 ## Getting Started
