@@ -354,6 +354,10 @@
     /* Underline the text "Share" */
 }
 
+#heartButton .text {
+    text-decoration: underline;
+    /* Underline the text "Share" */
+}
 
 .image-item {
     position: relative;
