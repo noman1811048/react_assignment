@@ -1,32 +1,43 @@
-
-import image1 from '../../assets/images/image1.jpg';
-import image2 from '../../assets/images/image2.jpg';
-import image3 from '../../assets/images/image3.jpg';
-import image4 from '../../assets/images/image4.jpg';
-import image5 from '../../assets/images/imag5.jpg';
-
-
+import { useContext } from 'react';
+import ShimmerLoader from '../ShimmerLoader/ShimmerLoader';
+import { HotelContext } from '../../context/HotelContext';
 
 
 const Gallery = () => {
+    const { hotelData, loading } = useContext(HotelContext);
+    console.log(hotelData);
+
+    if (loading) {
+        return <ShimmerLoader />;
+    }
+
+    if (!hotelData) {
+        return <div>No data available</div>;
+    }
+
+    const { images, title } = hotelData;
+    const baseUrl = 'http://localhost:8080'; // Ensure this matches your backend server address
+
     return (
         <div>
             <div className="header">
-                <h1 className="title">Comfy New Apt. in Pueblo Libre!</h1>
+                <h1 className="title">{title}</h1>
                 <div className="actions">
-                    <button id="shareButton"><span className="share-icon">↗️</span> <span className="text">Share</span></button>
+                    <button id="shareButton">
+                        <span className="share-icon">↗️</span> <span className="text">Share</span>
+                    </button>
                     <button id="heartButton" className="heart-button">
                         <span className="heart-icon">♡</span> <span className="text">Save</span>
                     </button>
                 </div>
             </div>
             <div className="image-grid">
-                <img src={image1} alt="Bedroom" className="main-image" />
-                <img src={image2} alt="Living room" />
-                <img src={image3} alt="Door lock" />
-                <img src={image4} alt="Dining area" />
+                <img src={`${baseUrl}${images[4]}`} alt="Main image" className="main-image" />
+                <img src={`${baseUrl}${images[3]}`} alt="Secondary image 1" />
+                <img src={`${baseUrl}${images[2]}`} alt="Secondary image 2" />
+                <img src={`${baseUrl}${images[1]}`} alt="Secondary image 3" />
                 <div className="image-container">
-                    <img src={image5} alt="Kitchen" />
+                    <img src={`${baseUrl}${images[0]}`} alt="Secondary image 4" />
                     <div className="show-all">
                         <div className="icon"></div>
                         Show all photos

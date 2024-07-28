@@ -1,8 +1,17 @@
 
 import userImage from '../../assets/images/user.png';
 import image1 from '../../assets/images/image1.jpg';
+import { HotelContext } from '../../context/HotelContext';
+import { useContext } from 'react';
+import ShimmerLoader from '../ShimmerLoader/ShimmerLoader';
 
 const ListingOverview = () => {
+    const { hotelData, loading } = useContext(HotelContext);
+
+    if (loading) {
+        return <ShimmerLoader />;
+    }
+    const { bathroom_count, bedroom_count, host_information, guest_count } = hotelData;
     return (
         <div>
             <section className="test-container">
@@ -10,13 +19,13 @@ const ListingOverview = () => {
                     <div className="listing-info">
                         <h1 className="listing-info-title">Comfy New Apt. in Pueblo Libre!</h1>
                         <h1 className="subheading">Entire rental unit in Lima, Peru</h1>
-                        <p className="details">2 guests · 1 bedroom · 1 bed · 1 bath</p>
+                        <p className="details">{guest_count} guests · {bedroom_count} bedroom · 1 bed · {bathroom_count} bath</p>
                         <p className="details">★ New</p>
                         <div className="divider"></div>
                         <div className="host-info">
                             <img src={userImage} alt="Host Fernando" />
                             <div>
-                                <p><strong>Hosted by Fernando</strong></p>
+                                <p><strong>{host_information}</strong></p>
                                 <p className="details">Superhost · 7 years hosting</p>
                             </div>
                         </div>
