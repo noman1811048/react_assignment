@@ -5,7 +5,7 @@ import { HotelContext } from '../../context/HotelContext';
 
 const Gallery = () => {
     const { hotelData, loading } = useContext(HotelContext);
-    console.log(hotelData);
+    
 
     if (loading) {
         return <ShimmerLoader />;
