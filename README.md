@@ -44,8 +44,8 @@ hotel-frontend/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/hotel-frontend.git
-cd hotel-frontend
+git clone https://github.com/noman1811048/react_assignment
+cd react_assignment
 ```
 ## Install dependencies:
 #### npm install
