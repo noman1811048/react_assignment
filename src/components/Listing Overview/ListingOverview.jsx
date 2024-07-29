@@ -1,6 +1,5 @@
 
 import userImage from '../../assets/images/user.png';
-
 import { HotelContext } from '../../context/HotelContext';
 import { useContext } from 'react';
 import ShimmerLoader from '../ShimmerLoader/ShimmerLoader';
@@ -80,7 +79,7 @@ const ListingOverview = () => {
 
                     <section className="where-youll-sleep">
                         <h2>Where you&apos;ll sleep</h2>
-                       <HotelRooms/>
+                        <HotelRooms />
                     </section>
 
                     <div className="divider"></div>

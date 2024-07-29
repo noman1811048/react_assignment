@@ -1,11 +1,13 @@
 .hotel-rooms {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px; /* Adjust the gap between images */
+    gap: 16px;
+    /* Adjust the gap between images */
 }
 
 .bedroom-card {
-    width: calc(33.333% - 16px); /* 3 images per row with a gap */
+    width: calc(33.333% - 16px);
+    /* 3 images per row with a gap */
     box-sizing: border-box;
     border: 1px solid #dddddd;
     border-radius: 12px;

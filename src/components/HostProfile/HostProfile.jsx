@@ -9,7 +9,7 @@ const HostProfile = () => {
     console.log(hotelData);
 
     if (loading) {
-        return <ShimmerLoader/>;
+        return <ShimmerLoader />;
     }
 
     if (!hotelData) {
@@ -26,7 +26,7 @@ const HostProfile = () => {
                     <div className="profile-card">
                         <div className="profile-info">
                             <div className="left">
-                                <img src={userImage}  alt="Fernando" className="profile-image" />
+                                <img src={userImage} alt="Fernando" className="profile-image" />
                                 <h2 className="profile-name">{host_information}</h2>
                                 <p className="superhost">Superhost</p>
                             </div>
@@ -47,11 +47,11 @@ const HostProfile = () => {
                         </div>
                         <div className="bio">
                             <p>
-                                <img src={userImage}  alt="Born icon" className="icon" />
+                                <img src={userImage} alt="Born icon" className="icon" />
                                 Born in the 80s
                             </p>
                             <p>
-                                <img src={userImage}  alt="Work icon" className="icon" />
+                                <img src={userImage} alt="Work icon" className="icon" />
                                 My work: Hospitality
                             </p>
                             <p>
@@ -73,7 +73,7 @@ const HostProfile = () => {
                             <h3>Co-hosts</h3>
                             <div className="co-host-list">
                                 <div className="co-host">
-                                    <img src={userImage}  alt="Percy" />
+                                    <img src={userImage} alt="Percy" />
                                     Percy
                                 </div>
                                 <div className="co-host">

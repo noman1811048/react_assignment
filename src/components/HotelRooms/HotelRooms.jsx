@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import './HotelRooms.css';
 import { HotelContext } from '../../context/HotelContext';
 import config from '../../config';
+import ShimmerLoader from '../ShimmerLoader/ShimmerLoader';
 
 const HotelRooms = () => {
     const { hotelData, loading } = useContext(HotelContext);
@@ -35,7 +36,7 @@ const HotelRooms = () => {
     }, [hotelData]);
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <ShimmerLoader />;
     }
 
     // Collect only the first 6 images from the room images

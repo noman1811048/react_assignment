@@ -9,9 +9,6 @@ import { HotelProvider } from "./context/HotelContext";
 import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
 
 
-
-
-
 const App = () => {
   return (
     <HotelProvider>

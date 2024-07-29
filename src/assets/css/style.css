@@ -268,57 +268,32 @@
     height: 410px !important;
 }
 
-.image-container {
-    position: relative;
-}
-
 .show-all {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
     font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    border: none;
     cursor: pointer;
-}
-
-.show-all .icon {
-    width: 16px;
-    height: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .grid-icon {
     margin-right: 8px;
-    border: 2px solid white;
-    border-radius: 3px;
+    fill: currentColor;
+  }
+  
+  .image-container {
     position: relative;
-}
-
-.show-all .icon:before {
-    content: '';
-    position: absolute;
-    top: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 8px;
-    height: 6px;
-    background-color: white;
-    border-radius: 2px 2px 0 0;
-}
-
-.show-all .icon:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: white;
-}
-
+  }
 
 .heart-button .heart-icon {
     transition: color 0.3s ease;
@@ -1138,6 +1113,11 @@ h1 {
 .profile-details {
     flex: 1;
 }
+@media (max-width: 768px) {
+    .profile-details  {
+        margin-top: 10%;
+    }
+}
 
 .superhost-info {
     margin-bottom: 20px;
@@ -1230,26 +1210,10 @@ h1 {
 
 @media (max-width: 768px) {
     .bio {
-        padding-left: 0;
-        padding-right: 0;
-        width: 100%; /* Ensure full width */
+        display: none;
     }
 
-    .bio p {
-        flex-direction: row; /* Keep icon and text side by side */
-        align-items: flex-start;
-        width: 100%; /* Ensure full width for paragraphs */
-    }
-
-    .bio .icon {
-        margin-right: 10px; /* Keep some space between icon and text */
-        margin-bottom: 0; /* Remove bottom margin */
-        flex-shrink: 0; /* Prevent icon from shrinking */
-    }
-
-    .bio p span {
-        flex-grow: 1; /* Allow text to take up remaining space */
-    }
+  
 }
 
 .show-more {

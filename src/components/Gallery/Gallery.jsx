@@ -3,8 +3,10 @@ import ShimmerLoader from '../ShimmerLoader/ShimmerLoader';
 import { HotelContext } from '../../context/HotelContext';
 import config from '../../config';
 import './Gallery.css';
+import { Share2 } from 'lucide-react';
 
 const Gallery = () => {
+    
     const { hotelData, loading } = useContext(HotelContext);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isMobile, setIsMobile] = useState(false);
@@ -13,10 +15,8 @@ const Gallery = () => {
         const checkMobile = () => {
             setIsMobile(window.innerWidth <= 768);
         };
-
         checkMobile();
         window.addEventListener('resize', checkMobile);
-
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
@@ -54,6 +54,12 @@ const Gallery = () => {
             </div>
             {isMobile ? (
                 <div className="mobile-slider">
+                    <div className="mobile-slider-header">
+                        <h2 className="mobile-title">{title}</h2>
+                        <button className="mobile-share-button">
+                            <Share2 size={24} />
+                        </button>
+                    </div>
                     <button className="slider-button prev" onClick={prevSlide}>&#10094;</button>
                     <button className="slider-button next" onClick={nextSlide}>&#10095;</button>
                     <div className="slider-container" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
@@ -84,10 +90,12 @@ const Gallery = () => {
                     <img src={`${baseUrl}${images[1]}`} alt="Secondary image 3" />
                     <div className="image-container">
                         <img src={`${baseUrl}${images[0]}`} alt="Secondary image 4" />
-                        <div className="show-all">
-                            <div className="icon"></div>
+                        <button className="show-all">
+                            <svg className="grid-icon" viewBox="0 0 24 24" width="18" height="18">
+                                <path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z" />
+                            </svg>
                             Show all photos
-                        </div>
+                        </button>
                     </div>
                 </div>
             )}
