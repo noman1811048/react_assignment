@@ -1,6 +1,23 @@
 
+import { useContext } from 'react';
 import userImage from '../../assets/images/user.png';
+import ShimmerLoader from '../ShimmerLoader/ShimmerLoader';
+import { HotelContext } from '../../context/HotelContext';
+
 const HostProfile = () => {
+    const { hotelData, loading } = useContext(HotelContext);
+    console.log(hotelData);
+
+    if (loading) {
+        return <ShimmerLoader/>;
+    }
+
+    if (!hotelData) {
+        return <div>No data available</div>;
+    }
+
+    const { host_information } = hotelData;
+
     return (
         <div>
             <section className="profile-section">
@@ -10,7 +27,7 @@ const HostProfile = () => {
                         <div className="profile-info">
                             <div className="left">
                                 <img src={userImage}  alt="Fernando" className="profile-image" />
-                                <h2 className="profile-name">Fernando</h2>
+                                <h2 className="profile-name">{host_information}</h2>
                                 <p className="superhost">Superhost</p>
                             </div>
                             <div className="right">

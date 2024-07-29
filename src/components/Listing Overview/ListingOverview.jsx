@@ -1,9 +1,10 @@
 
 import userImage from '../../assets/images/user.png';
-import image1 from '../../assets/images/image1.jpg';
+
 import { HotelContext } from '../../context/HotelContext';
 import { useContext } from 'react';
 import ShimmerLoader from '../ShimmerLoader/ShimmerLoader';
+import HotelRooms from '../HotelRooms/HotelRooms';
 
 const ListingOverview = () => {
     const { hotelData, loading } = useContext(HotelContext);
@@ -79,11 +80,7 @@ const ListingOverview = () => {
 
                     <section className="where-youll-sleep">
                         <h2>Where you&apos;ll sleep</h2>
-                        <div className="bedroom-card">
-                            <img src={image1} alt="Bedroom" />
-                            <h3>Bedroom</h3>
-                            <p>1 double bed</p>
-                        </div>
+                       <HotelRooms/>
                     </section>
 
                     <div className="divider"></div>

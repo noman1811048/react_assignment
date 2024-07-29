@@ -1,0 +1,104 @@
+.hotel-rooms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Adjust the gap between images */
+}
+
+.bedroom-card {
+    width: calc(33.333% - 16px); /* 3 images per row with a gap */
+    box-sizing: border-box;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.bedroom-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.bedroom-card h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.bedroom-card p {
+    font-size: 14px;
+    color: #717171;
+}
+
+
+/* Mobile Slider Styles */
+.mobile-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slider-container .bedroom-card {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+@media (max-width: 768px) {
+    .hotel-rooms {
+        display: block;
+    }
+
+    .bedroom-card {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-slider {
+        display: none;
+    }
+}
