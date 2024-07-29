@@ -62,3 +62,16 @@ cd react_assignment
 #### Open your browser and navigate to http://localhost:3000/hotel/hotel-slug.
 ### Deployment
 #### npm run build
+
+Contributing
+If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are welcome.
+
+Fork the repository
+Create your feature branch (git checkout -b feature/AmazingFeature)
+Commit your changes (git commit -m 'Add some AmazingFeature')
+Push to the branch (git push origin feature/AmazingFeature)
+Open a Pull Request
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+By following these steps, you should have a beautifully styled README that is clear, comprehensive, and easy to follow.
