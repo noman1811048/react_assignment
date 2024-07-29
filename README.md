@@ -63,7 +63,7 @@ cd react_assignment
 ### Deployment
 #### npm run build
 
-Contributing
+## Contributing
 If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are welcome.
 
 Fork the repository
