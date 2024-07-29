@@ -13,32 +13,63 @@ This is a frontend application built using React that displays hotel details. It
 
 ## Folder Structure
 ```
-src/
-├── assets/
-│   ├── images/
-│   │   ├── image1.jpg
-│   │   ├── image2.jpg
-│   │   ├── image3.jpg
-│   │   ├── image4.jpg
-│   │   └── image5.jpg
-├── components/
-│   ├── Gallery/
-│   │   ├── Gallery.jsx
-│   │   └── Gallery.css
-│   ├── NotFoundPage/
-│   │   ├── NotFoundPage.jsx
-│   │   └── NotFoundPage.css
-├── hooks/
-│   └── useFetch.js
-├── pages/
-│   ├── Home/
-│   │   └── Home.jsx
-│   ├── Hotel/
-│   │   └── Hotel.jsx
-├── App.js
-├── index.js
-└── config/
-    └── config.json
+react_assignment_backend
+├── config
+│   ├── config.json        # Configuration file for database credentials
+│   ├── db.js              # Database connection setup
+├── controllers
+│   ├── hotels.js          # Controller for hotel-related routes
+│   ├── rooms.js           # Controller for room-related routes
+├── models
+│   ├── hotels.js          # Sequelize model definition for Hotel
+│   ├── rooms.js           # Sequelize model definition for Room
+├── routes
+│   ├── hotels.js          # Routes for hotel-related endpoints
+│   ├── rooms.js           # Routes for room-related endpoints
+├── src
+│   ├── assets
+│   │   ├── images
+│   │       ├── image1.jpg
+│   │       ├── image2.jpg
+│   │       ├── image3.jpg
+│   │       ├── image4.jpg
+│   │       └── image5.jpg
+│   ├── components
+│   │   ├── Footer
+│   │   │   └── Footer.jsx
+│   │   ├── Gallery
+│   │   │   ├── Gallery.jsx
+│   │   │   └── Gallery.css
+│   │   ├── Header
+│   │   │   └── Header.jsx
+│   │   ├── HostProfile
+│   │   │   └── HostProfile.jsx
+│   │   ├── HotelRooms
+│   │   │   └── HotelRooms.jsx
+│   │   ├── Map
+│   │   │   └── Map.jsx
+│   │   ├── NotFoundPage
+│   │   │   ├── NotFoundPage.jsx
+│   │   │   └── NotFoundPage.css
+│   │   ├── ShimmerLoader
+│   │   │   └── ShimmerLoader.jsx
+│   ├── hooks
+│   │   └── useFetch.js
+│   ├── pages
+│   │   ├── Home
+│   │   │   └── Home.jsx
+│   │   ├── Hotel
+│   │   │   └── Hotel.jsx
+│   ├── App.js
+│   ├── index.js
+│   ├── config
+│   │   └── config.json
+│   ├── context
+│   │   └── ContextHotel.jsx
+├── .gitignore             
+├── package.json    
+└── README.md      
+
 
 ```
 
