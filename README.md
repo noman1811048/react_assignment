@@ -93,7 +93,7 @@ cd react_assignment
 ```
 ## Install dependencies:
 #### npm install
-#### Open your browser and navigate to http://localhost:3000/hotel/hotel-slug.
+#### Open your browser and navigate to http://localhost:5173/hotel/hotel-slug.
 ### Deployment
 #### npm run build
 
