@@ -1,0 +1,25 @@
+/* src/components/NotFound/NotFoundPage.css */
+
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #343a40;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+  }
+  
+  .not-found-title {
+    font-size: 48px;
+    margin: 0;
+  }
+  
+  .not-found-text {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  

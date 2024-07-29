@@ -6,7 +6,8 @@ import {
 import Home from "./pages/Home/Home";
 
 import { HotelProvider } from "./context/HotelContext";
-import NotFoundPage from "./components/NotFound/NotFound";
+import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
+
 
 
 
