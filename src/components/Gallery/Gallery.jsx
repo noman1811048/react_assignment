@@ -1,11 +1,12 @@
+// src/components/Gallery/Gallery.jsx
 import { useContext } from 'react';
 import ShimmerLoader from '../ShimmerLoader/ShimmerLoader';
 import { HotelContext } from '../../context/HotelContext';
+import config from '../../config';
 
 
 const Gallery = () => {
     const { hotelData, loading } = useContext(HotelContext);
-    
 
     if (loading) {
         return <ShimmerLoader />;
@@ -16,7 +17,7 @@ const Gallery = () => {
     }
 
     const { images, title } = hotelData;
-    const baseUrl = 'http://localhost:8080'; // Ensure this matches your backend server address
+    const baseUrl = config.apiBaseURL; // Use the baseURL from the config
 
     return (
         <div>
