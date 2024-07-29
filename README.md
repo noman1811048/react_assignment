@@ -13,19 +13,7 @@ This is a frontend application built using React that displays hotel details. It
 
 ## Folder Structure
 ```
-react_assignment_backend
-├── config
-│   ├── config.json        # Configuration file for database credentials
-│   ├── db.js              # Database connection setup
-├── controllers
-│   ├── hotels.js          # Controller for hotel-related routes
-│   ├── rooms.js           # Controller for room-related routes
-├── models
-│   ├── hotels.js          # Sequelize model definition for Hotel
-│   ├── rooms.js           # Sequelize model definition for Room
-├── routes
-│   ├── hotels.js          # Routes for hotel-related endpoints
-│   ├── rooms.js           # Routes for room-related endpoints
+react_assignment
 ├── src
 │   ├── assets
 │   │   ├── images
