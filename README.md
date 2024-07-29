@@ -34,6 +34,9 @@ react_assignment_backend
 │   │       ├── image3.jpg
 │   │       ├── image4.jpg
 │   │       └── image5.jpg
+        ├── css
+│   │       ├── style.css
+│   │      
 │   ├── components
 │   │   ├── Footer
 │   │   │   └── Footer.jsx
